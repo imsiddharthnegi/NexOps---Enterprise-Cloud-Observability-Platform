@@ -1,4 +1,5 @@
 'use client';
+'use client';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 export default function BarChartComponent({ data }: { data: any[] }) {
   return (
