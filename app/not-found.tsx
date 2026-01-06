@@ -1,5 +1,5 @@
 "use client"
-import Button from "@/components/Button/Button"
+import Button from "@/components/Button/Button.tsx"
 import { useRouter } from "next/navigation"
 
 export default function NotFoundPage() {
