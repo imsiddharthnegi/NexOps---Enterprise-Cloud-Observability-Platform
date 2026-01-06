@@ -1,5 +1,5 @@
+# NexOps - Enterprise Cloud Observability Platform 🚀
 
-# NexOps - Enterprise Cloud Observability Platform 🚀 
 NexOps is a modern, full-stack infrastructure monitoring dashboard designed to visualize complex datasets with performance and clarity.
 Built to simulate a real-world B2B SaaS product, this project demonstrates:
 High-Performance Rendering: Utilizing Next.js Server Components.
@@ -16,14 +16,19 @@ Charts: Recharts
 Deployment: Vercel
 🚀 Getting Started
 Clone the repo:
+
 ```bash
-git clone `https://github.com/imsiddharthnegi/NexOps-Platform.git` 
+git clone `https://github.com/imsiddharthnegi/NexOps-Platform.git`
 ```
+
 Install dependencies:
+
 ```bash
 npm install
 ```
+
 Run the server:
+
 ```bash
 npm run dev
 ```
