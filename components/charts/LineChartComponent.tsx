@@ -1,15 +1,10 @@
 'use client';
-
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-
-interface LineChartProps {
-  data: Array<{ name: string; value: number }>;
-}
-
-export function LineChartComponent({ data }: LineChartProps) {
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+export default function LineChartComponent({ data }: { data: any[] }) {
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="100%" height={350}>
       <LineChart data={data}>
+        <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
