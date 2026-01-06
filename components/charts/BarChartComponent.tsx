@@ -1,26 +1,26 @@
 "use client"
 
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from "recharts"
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
-interface BarChartComponentProps {
-  data: any[]
+interface BarChartProps {
+  data: Array<{ name: string; value: number }>;
+  title?: string;
 }
 
-export function BarChartComponent({ data }: BarChartComponentProps) {
+const BarChartComponent = ({ data, title }: BarChartProps) => {
   return (
-    <BarChart
-      data={data}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Bar dataKey="uv" fill="#82ca9d" />
-    </BarChart>
-  )
-}
+    <div className="h-80 w-full">
+      {title && <h3 className="mb-2 font-medium">{title}</h3>}
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Bar dataKey="value" fill="#8884d8" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default BarChartComponent;
